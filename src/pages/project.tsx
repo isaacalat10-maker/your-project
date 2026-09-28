@@ -35,20 +35,20 @@ const projects: Project[] = [
         ],
         icon: faLaptopCode,
         mediaType: "video",
-        mediaSrc: "/projects/alamin.mp4",
-        poster: "/projects/alamin.png",
+        mediaSrc: "/projects/isaac.mp4",
+        poster: "/projects/isaac.png",
     },
     {
         title: "School Management Portal",
         category: "Web",
-        type: "Full-stack",
+        type: "Web Developing",
         description:
             "A school management system with a parent portal for student results, academic records and school administration.",
         technologies: ["Laravel", "Inertia", "React", "MySQL"],
         icon: faSchool,
         mediaType: "video",
-        mediaSrc: "/projects/school-portal.mp4",
-        poster: "/projects/school-portal.png",
+        mediaSrc: "/projects/your-project.mp4",
+        poster: "/projects/your-project.png",
     },
     {
         title: "Teacher Exam Processing App",
@@ -91,8 +91,7 @@ export const ProjectPage = () => {
 
                     <p className="mt-4 max-w-2xl text-sm leading-6 text-text-secondary md:text-base">
                         A collection of applications and systems I've built
-                        while exploring different areas of software
-                        development.
+                        while exploring different areas of web development.
                     </p>
                 </div>
             </section>

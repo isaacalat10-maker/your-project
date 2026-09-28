@@ -40,7 +40,7 @@ export const NavBar = () => {
             </span>
 
             <span className="text-sm font-semibold text-foreground">
-              Alayande Al-amin
+              ISAAC ALAT
             </span>
           </NavLink>
 

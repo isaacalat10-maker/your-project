@@ -1,5 +1,5 @@
 export const allCredentials={
-  gmail:"alayandefathiat52@gmail.com",
-  github:"https://github.com/Alayande31",
+  gmail:"isaacalat10@gmail.com",
+  github:"https://github.com/isaacalat10-maker",
  
 }

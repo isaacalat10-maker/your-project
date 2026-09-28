@@ -26,20 +26,18 @@ export const AboutPage = () => {
 
                             <div className="mt-5 max-w-2xl space-y-4 text-sm leading-6 text-text-secondary">
                                 <p>
-                                    I'm Al-amin, a full-stack developer with a
-                                    strong interest in building scalable web
-                                    and mobile applications. I enjoy solving
-                                    real problems, working with great people,
-                                    and constantly learning new technologies.
+                                    Hi, I’m Isaac, a passionate web developer who enjoys creating modern,
+                                    responsive, and user-friendly websites. I love turning ideas into 
+                                    functional digital experiences and solving problems through technology.
+
                                 </p>
 
                                 <p>
-                                    I'm currently focused on deepening my
-                                    backend and systems design skills, while
-                                    also exploring AI and data retrieval. I
-                                    believe in clean code, practical
-                                    solutions, and building products that
-                                    have a real impact.
+                                    I’m constantly learning and improving my skills in web development, 
+                                    exploring new technologies, and working on projects that challenge me to grow. 
+                                    My goal is to create websites that not only look great but also provide a 
+                                    smooth and enjoyable experience for users.
+
                                 </p>
                             </div>
 
@@ -82,7 +80,7 @@ export const AboutPage = () => {
                                             </p>
 
                                             <p className="mt-1 truncate text-xs font-medium text-foreground">
-                                                alayandefathiat52@gmail.com
+                                                isaacalat10@gmail.com
                                             </p>
                                         </div>
                                     </div>
@@ -115,7 +113,7 @@ export const AboutPage = () => {
                         <div className="mx-auto w-full max-w-xs lg:mx-0 lg:ml-auto">
                             <div className="overflow-hidden rounded-2xl border border-border bg-surface">
                                 <img
-                                    src="V.jpg"
+                                    src="V.png"
                                     className="aspect-[4/5] w-full object-cover"
                                 />
                             </div>
@@ -152,7 +150,7 @@ export const AboutPage = () => {
                                 <div className="relative z-10 mt-1 h-3 w-3 rounded-full bg-primary ring-4 ring-background" />
 
                                 <p className="pt-0 text-xs font-medium text-text-secondary md:text-sm">
-                                    2019 – 2025
+                                    2025 - 2026
                                 </p>
 
                                 <div>
@@ -163,10 +161,6 @@ export const AboutPage = () => {
                                     <p className="mt-1 text-xs text-text-secondary md:text-sm">
                                         Chyfley Comprehensive College.
                                     </p>
-
-                                    <p className="mt-1 text-xs text-text-secondary">
-                                        CGPA: 4.34/5 &nbsp; (2:1 Equivalent)
-                                    </p>
                                 </div>
                             </div>
 
@@ -176,12 +170,12 @@ export const AboutPage = () => {
                                 <div className="relative z-10 mt-1 h-3 w-3 rounded-full bg-primary ring-4 ring-background" />
 
                                 <p className="pt-0 text-xs font-medium text-text-secondary md:text-sm">
-                                    2024 – Present
+                                    2025 – Present
                                 </p>
 
                                 <div>
                                     <h3 className="text-sm font-semibold text-foreground md:text-base">
-                                        Full-stack Developer (Personal
+                                        Web Developer (Personal
                                         Projects)
                                     </h3>
 
@@ -203,13 +197,12 @@ export const AboutPage = () => {
 
                                 <div>
                                     <h3 className="text-sm font-semibold text-foreground md:text-base">
-                                        Exploring AI / Data Retrieval
+                                        IT/Cloud Engineering
                                     </h3>
 
                                     <p className="mt-1 max-w-xl text-xs leading-5 text-text-secondary md:text-sm">
-                                        Working on personal projects and
-                                        improving my skills in ML and data
-                                        systems.
+                                        Developing the skills to design, manage, 
+                                        and secure modern cloud technologies.
                                     </p>
                                 </div>
                             </div>

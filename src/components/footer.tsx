@@ -9,17 +9,17 @@ export const Footer = () => {
             <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                     <p className="text-sm font-semibold text-foreground">
-                        Alayande Al-amin
+                        ISAAC ALAT
                     </p>
 
                     <p className="mt-1 text-xs text-muted">
-                        Building software and learning how systems work.
+                        Building websites and learning how systems work.
                     </p>
                 </div>
 
                 <div className="flex items-center gap-5">
                     <a
-                        href="https://github.com/Alayande31"
+                        href="https://github.com/isaacalat10-maker"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
                         className="text-muted transition hover:text-foreground"
@@ -29,7 +29,7 @@ export const Footer = () => {
 
                   
                     <span className="text-xs text-muted">
-                        © {new Date().getFullYear()} Alayande Al-amin
+                        © {new Date().getFullYear()} ISAAC ALAT
                     </span>
                 </div>
             </div>

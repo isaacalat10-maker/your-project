@@ -3,7 +3,6 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import {
     faGithub,
-    faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { SkillsAndExpertise } from "../components/skillAndExpertise";
@@ -23,20 +22,21 @@ export const HomePage = () => {
                     {/* Hero Content */}
                     <div>
                         <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-                            Full-Stack Developer
+                            Web Developer
                         </p>
 
                         <h1 className="max-w-4xl text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
-                            I build software that
+                            I build websites that
                             <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                                 solves real problems.
                             </span>
                         </h1>
 
                         <p className="mt-6 max-w-2xl text-lg leading-8 text-text-secondary">
-                            I'm Alayande Al-amin, a full-stack developer focused
-                            on building practical applications across the
-                            frontend, backend, databases, and infrastructure.
+                             I’m a creative web developer who specializes in building clean, 
+                                    responsive, and engaging websites. I’m passionate about technology, 
+                                    problem-solving, and creating digital experiences that are both 
+                                    visually appealing and easy to use.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-4">
@@ -57,20 +57,12 @@ export const HomePage = () => {
 
                         <div className="mt-8 flex items-center gap-5">
                             <a
-                                href="https://github.com/Alayande31"
+                                href="https://github.com/isaacalat10-maker"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub"
                                 className="text-text-muted transition hover:text-foreground"
                             >
                                 <FontAwesomeIcon icon={faGithub} />
-                            </a>
-
-                            <a
-                                href="#"
-                                aria-label="LinkedIn"
-                                className="text-text-muted transition hover:text-foreground"
-                            >
-                                <FontAwesomeIcon icon={faLinkedin} />
                             </a>
                         </div>
                     </div>
@@ -81,7 +73,7 @@ export const HomePage = () => {
                             <div className="absolute inset-5 rounded-2xl border border-primary/20" />
 
                             <div className="flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-3xl font-bold text-white shadow-2xl">
-                                AL
+                                IA
                             </div>
                         </div>
                     </div>

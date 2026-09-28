@@ -101,7 +101,7 @@ useEffect(() => {
 
                     <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-text-secondary md:text-base">
                         Have a project, opportunity, or just want to talk
-                        about software? I'd be happy to hear from you.
+                        about websites? I'd be happy to hear from you.
                     </p>
                 </div>
             </section>
@@ -376,11 +376,11 @@ useEffect(() => {
             <section className="border-t border-border py-14">
                 <div className="mx-auto max-w-3xl px-6 text-center">
                     <p className="text-lg font-medium leading-8 text-foreground">
-                        "Building software and learning how systems work."
+                        "Building websites and learning how systems work."
                     </p>
 
                     <p className="mt-3 text-sm text-muted">
-                        — Kelvin Peters
+                        — ISAAC ALAT
                     </p>
                 </div>
             </section>
