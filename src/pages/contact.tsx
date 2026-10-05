@@ -20,7 +20,7 @@ export const ContactPage = () => {
     const [sent, setSent] = useState(false);
     const [error, setError] = useState("");
 const submitController = useRef<AbortController | null>(null);
-    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // Abort any previous request that is still running
@@ -53,26 +53,51 @@ const submitController = useRef<AbortController | null>(null);
             signal: controller.signal,
         });
 
-        const result = await response.json();
+        // Read the response as text first
+        const responseText = await response.text();
+
+        // Convert to JSON only if there is actually a response
+        let result: {
+            message?: string;
+            error?: string;
+        } = {};
+
+        if (responseText) {
+            try {
+                result = JSON.parse(responseText);
+            } catch {
+                console.error("Server returned:", responseText);
+
+                throw new Error(
+                    "The server returned an invalid response."
+                );
+            }
+        }
 
         if (!response.ok) {
             throw new Error(
-                result.message || "Something went wrong."
+                result.message ||
+                result.error ||
+                "Something went wrong."
             );
         }
 
         setSent(true);
         form.reset();
+
     } catch (err) {
         if (err instanceof DOMException && err.name === "AbortError") {
             return;
         }
+
+        console.error("Contact form error:", err);
 
         setError(
             err instanceof Error
                 ? err.message
                 : "Failed to send message."
         );
+
     } finally {
         if (submitController.current === controller) {
             submitController.current = null;
@@ -80,6 +105,7 @@ const submitController = useRef<AbortController | null>(null);
         }
     }
 };
+
 useEffect(() => {
     return () => {
         submitController.current?.abort();

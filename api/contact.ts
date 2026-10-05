@@ -25,25 +25,28 @@ export default async function handler(
     }
 
     try {
-        const body = req.body;
+        const body = req.body ?? {};
 
         const name = String(body.name ?? "").trim();
         const email = String(body.email ?? "").trim();
         const subject = String(body.subject ?? "").trim();
         const message = String(body.message ?? "").trim();
 
+        // Validate required fields
         if (!name || !email || !subject || !message) {
             return res.status(400).json({
                 message: "Please fill in all fields.",
             });
         }
 
+        // Validate email
         if (!isValidEmail(email)) {
             return res.status(400).json({
                 message: "Please provide a valid email address.",
             });
         }
 
+        // Validate length
         if (
             name.length > 100 ||
             email.length > 254 ||
@@ -55,14 +58,33 @@ export default async function handler(
             });
         }
 
+        // Escape user input before putting it into HTML
         const safeName = escapeHtml(name);
         const safeEmail = escapeHtml(email);
         const safeSubject = escapeHtml(subject);
         const safeMessage = escapeHtml(message).replace(/\n/g, "<br />");
 
+        // Check environment variables
+        if (!process.env.RESEND_API_KEY) {
+            console.error("RESEND_API_KEY is missing.");
+
+            return res.status(500).json({
+                message: "Email service is not configured.",
+            });
+        }
+
+        if (!process.env.CONTACT_EMAIL) {
+            console.error("CONTACT_EMAIL is missing.");
+
+            return res.status(500).json({
+                message: "Contact email is not configured.",
+            });
+        }
+
+        // Send email through Resend
         const { error } = await resend.emails.send({
             from: "Portfolio Contact <onboarding@resend.dev>",
-            to: process.env.CONTACT_EMAIL!,
+            to: process.env.CONTACT_EMAIL,
             replyTo: email,
             subject: `Portfolio Contact: ${subject}`,
             html: `
@@ -100,11 +122,12 @@ export default async function handler(
         return res.status(200).json({
             message: "Message sent successfully.",
         });
+
     } catch (error) {
         console.error("Contact API error:", error);
 
-        return res.status(400).json({
-            message: "Invalid request.",
+        return res.status(500).json({
+            message: "Server error while sending message.",
         });
     }
 }
